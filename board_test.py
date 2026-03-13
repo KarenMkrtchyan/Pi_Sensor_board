@@ -24,7 +24,7 @@ for i in range(2):
 
     print("--- LIGHT SENSOR TEST ---")
     for i in range(50):
-        v = adc.read([mcp3008.CH0])
+        v = adc.read([mcp3008.CH0])[0]
         print(str(v) + ": Bright" if v > DARK_THRESH else ": Dark")
         time.sleep(.1)
 
@@ -37,7 +37,7 @@ for i in range(2):
     print("--- SOUND SENSOR TEST ---")
     for i in range(50):
         led.value = False
-        v = adc.read([mcp3008.CH1])
+        v = adc.read([mcp3008.CH1])[0]
         if v < LOUD_THRESH:
              led.value = True
         print(v)
