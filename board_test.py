@@ -12,14 +12,14 @@ led.direction = digitalio.Direction.OUTPUT
 adc = mcp3008.MCP3008()
 
 while True:
-    # LED test
+    print("--- LED TEST ---")
     for i in range(5):
         led.value = True
         time.sleep(0.5)
         led.value = False
         time.sleep(0.5)
 
-    # Light sensor test
+    print("--- LIGHT SENSOR TEST ---")
     for i in range(50):
         print(adc.read([mcp3008.CH0]))
         time.sleep(.1)
@@ -29,7 +29,8 @@ while True:
         time.sleep(0.2)
         led.value = False
         time.sleep(0.2)
-    # Sound sensor test
+
+    print("--- SOUND SENSOR TEST ---")
     for i in range(50):
         print(adc.read([mcp3008.CH1]))
         time.sleep(.1)
