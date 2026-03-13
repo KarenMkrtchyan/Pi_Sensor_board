@@ -1,7 +1,7 @@
 import time
 import board
 import digitalio
-import mc3008
+import mcp3008
 
 PIN = board.D4
 
