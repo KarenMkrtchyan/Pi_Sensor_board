@@ -2,7 +2,7 @@ import time
 import board
 import digitalio
 
-PIN = board.D18
+PIN = board.D4
 
 print("hello blinky!")
 
